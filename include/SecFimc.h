@@ -42,7 +42,10 @@ extern "C" {
 #include <unistd.h>
 #include <errno.h>
 #include <fcntl.h>
-#include <asm/sizes.h>
+//#include <asm/sizes.h>
+#ifndef SZ_8K
+#define SZ_8K 0x00002000
+#endif
 
 #include <sys/ioctl.h>
 #include <sys/types.h>

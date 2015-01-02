@@ -489,6 +489,9 @@ struct private_module_t HAL_MODULE_INFO_SYM =
         getphys: gralloc_getphys,
         perform: NULL,
         lock_ycbcr: NULL,
+	lockAsync: NULL,
+	unlockAsync: NULL,
+	lockAsync_ycbcr: NULL,
         reserved_proc: {0,},
     },
     framebuffer: NULL,
@@ -497,5 +500,5 @@ struct private_module_t HAL_MODULE_INFO_SYM =
     bufferMask: 0,
     lock: PTHREAD_MUTEX_INITIALIZER,
     currentBuffer: NULL,
-    ion_client: -1,
+    ion_client: -1
 };
